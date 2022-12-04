@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "Makefile.*": "makefile",
+        "Kbuild.include": "makefile",
+        "Kconfig.include": "makefile",
+        "*.its": "dts",
+        "*.S": "arm",
+        "global_data.h": "c"
+    }
+}
