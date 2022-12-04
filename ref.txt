@@ -1,0 +1,4 @@
+https://u-boot.readthedocs.io/en/v2021.04/board/emulation/qemu-mips.html
+
+Debugging of U-Boot After Relocation
+-exec add-symbol-file build/u-boot/u-boot 0x7fef4000
