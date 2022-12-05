@@ -1,6 +1,6 @@
 ARCH			:=arm
 CROSS_COMPILE	:=aarch64-none-linux-gnu-
-DEFCONFIG		:=qemu_arm64_defconfig
+DEFCONFIG		:=u_boot_explorer_defconfig
 BUILD_BASE		:=$(PWD)/build
 U_BOOT_DIR		:=$(BUILD_BASE)/u-boot
 U_BOOT_SRC		:=u-boot
@@ -55,10 +55,6 @@ debug:
 
 phony+=genimage
 genimage:
-	rm -f $(NVME_IMAGE)
-	sudo dd if=/dev/zero of=$(NVME_IMAGE) bs=$(NVME_BS) count=$(NVME_COUNT) status=progress
-	sudo chown $(shell logname):$(shell logname) $(NVME_IMAGE)
-	echo -e "o\nn\np\n1\n2048\n\nw" | fdisk $(NVME_IMAGE)
-	mkfs.vfat $(NVME_IMAGE) -F 32 -I
+	./genimage.sh
 
 .PHONY: $(phony)
