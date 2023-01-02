@@ -1,6 +1,10 @@
 https://u-boot.readthedocs.io/en/v2021.04/board/emulation/qemu-mips.html
 
 relocate_code 의 x0 확인 필요!
+relocate_done
 
 Debugging of U-Boot After Relocation
 -exec add-symbol-file build/u-boot/u-boot 0x7fef4000
+
+check x9 register in end of relocate_done
+-exec add-symbol-file build/u-boot/u-boot ${x9}
