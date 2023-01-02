@@ -1,6 +1,4 @@
 #!/bin/bash
-USER=`logname`
-
 echo rm -f nvme.img
 rm -f nvme.img
 
@@ -13,7 +11,7 @@ echo copy files to fat.img...
 echo mcopy -s -i fat.img Makefile ::/ 
 mcopy -s -i fat.img Makefile ::/ 
 echo mcopy -s -i fat.img build/* ::/ 
-mcopy -s -i fat.img build/* ::/ 
+mcopy -s -i fat.img build/u-boot ::/ 
 
 echo create mbr...
 sudo dd if=/dev/zero of=mbr.img bs=512 count=2048 status=progress
