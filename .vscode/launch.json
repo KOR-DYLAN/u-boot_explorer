@@ -16,7 +16,7 @@
             "stopAtEntry": true,
             "cwd": "${workspaceRoot}",
             "environment": [],
-            "miDebuggerPath": "/opt/gcc-arm-10.2-2020.11-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gdb",
+            "miDebuggerPath": "/opt/aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gdb",
             "MIMode": "gdb",
             "miDebuggerServerAddress": "localhost:9500",
             "showDisplayString": true,
